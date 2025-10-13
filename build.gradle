@@ -2,6 +2,13 @@ plugins {
 	id 'com.gradleup.shadow' version '8.3.6'
 }
 
+sourceSets {
+	main {
+		java.srcDir 'src'
+		resources.srcDir 'resources'
+	}
+}
+
 dependencies {
 	testImplementation(compileOnly('org.projectlombok:lombok:1.18.32'))
 	testAnnotationProcessor(annotationProcessor('org.projectlombok:lombok:1.18.32'))
@@ -11,7 +18,7 @@ dependencies {
 	testImplementation(implementation(project(":skds-lib")))
 }
 
-mainClassName = 'null'
+//mainClassName = 'null'
 
 shadowJar {
 	dependencies {
