@@ -35,7 +35,7 @@ public class RoomFilters extends ArrayList<RoomFilter> {
 
 	static class JCodec extends CollectionCodec {
 		public JCodec(Type tClass, CodecRegistry registry) {
-			super(RoomFilters.class, registry.getCodecIndirect(RoomFilter.class), registry, RoomFilters::new);
+			super(tClass, registry.getCodecIndirect(RoomFilter.class), registry, RoomFilters::new);
 		}
 	}
 

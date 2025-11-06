@@ -342,7 +342,7 @@ public class BiomeLegacyLayer extends ListRegistryLayer<BiomeLegacyLayer.BiomePo
 	static class ValuesCodec extends BuiltinCodecFactory.CollectionCodec {
 
 		public ValuesCodec(Type tClass, CodecRegistry registry) {
-			super(List.class, new DungeonRegistryObject.JCodec(BiomeLegacyLayer.BiomeInfo.class, registry), registry, ArrayList::new);
+			super(tClass, new DungeonRegistryObject.JCodec(BiomeLegacyLayer.BiomeInfo.class, registry), registry, ArrayList::new);
 		}
 
 	}

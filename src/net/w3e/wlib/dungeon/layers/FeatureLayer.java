@@ -294,7 +294,7 @@ public class FeatureLayer extends ListRegistryLayer<FeatureLayer.FeaturePoint, F
 	static class ValuesCodec extends BuiltinCodecFactory.CollectionCodec {
 
 		public ValuesCodec(Type tClass, CodecRegistry registry) {
-			super(List.class, new DungeonRegistryObject.JCodec(FeatureLayer.FeatureVariant.class, registry), registry, ArrayList::new);
+			super(tClass, new DungeonRegistryObject.JCodec(FeatureLayer.FeatureVariant.class, registry), registry, ArrayList::new);
 		}
 
 	}

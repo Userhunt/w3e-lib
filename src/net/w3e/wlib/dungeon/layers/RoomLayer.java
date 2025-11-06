@@ -565,7 +565,7 @@ public class RoomLayer extends ListRegistryLayer<RoomLayer.RoomPoint, RoomLayer.
 	static class ValuesCodec extends BuiltinCodecFactory.CollectionCodec {
 
 		public ValuesCodec(Type tClass, CodecRegistry registry) {
-			super(List.class, new DungeonRegistryObject.JCodec(RoomLayer.RoomVariant.class, registry), registry, ArrayList::new);
+			super(tClass, new DungeonRegistryObject.JCodec(RoomLayer.RoomVariant.class, registry), registry, ArrayList::new);
 		}
 
 	}
